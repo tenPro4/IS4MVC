@@ -1,0 +1,7 @@
+﻿@using IS4MVC.Database.Entities
+@model IEnumerable<TestTable>
+
+<h1>Admin Home page</h1>
+@foreach(var d in Model){
+    <p>@d.Name</p>
+}

@@ -1,0 +1,42 @@
+﻿@using IS4MVC.UI.Configuration;
+
+@inject AdminConfiguration AdminConfiguration
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="@UrlHelper.Content(AdminConfiguration.FaviconUri)" />
+    <link rel="shortcut icon" type="image/x-icon" href="@UrlHelper.Content(AdminConfiguration.FaviconUri)" />
+    <title>@AdminConfiguration.PageTitle</title>
+
+    <environment include="Development">
+        <link href="~/dist/css/bundle.min.css" asp-append-version="true" rel="stylesheet" />
+        @await Html.PartialAsync("Common/ThemeResources")
+        <link href="~/dist/css/web.css" asp-append-version="true" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        <link href="~/dist/css/bundle.min.css" asp-append-version="true" rel="stylesheet" />
+        @await Html.PartialAsync("Common/ThemeResources")
+        <link href="~/dist/css/web.min.css" asp-append-version="true" rel="stylesheet" />
+    </environment>
+
+</head>
+<body>
+    <div class="container">
+        @RenderBody()
+
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-md-3 text-right">
+                    @await Html.PartialAsync("Common/SelectTheme")
+                </div>
+            </div>
+
+
+        </footer>
+    </div>
+
+    @await RenderSectionAsync("scripts", required: false)
+</body>
+</html>

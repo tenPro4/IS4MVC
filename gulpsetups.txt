@@ -1,0 +1,13 @@
+https://www.codeproject.com/Articles/1165004/How-to-Use-Gulp-with-ASP-NET-Core-MVC#:~:text=In%20the%20first%20step%2C%20we%20are%20going%20to%20load%20module.,-JavaScript&text=JavaScript-,var%20gulp%20%3D%20require('gulp')%3B%20%2F%2FUsing%20package,the%20path%20of%20%22%20wwwroot%20%22.&text=var%20paths%20%3D%20%7B%20webroot%3A%20%22.%2Fwwwroot%2F%22%20%7D%3B,-In%20the%20third
+
+
+gulp require package
+    "gulp": "4.0.2",
+    "gulp-clean-css": "4.3.0",
+    "gulp-concat": "2.6.1",
+    "gulp-sass": "5.1.0",
+    "gulp-uglify": "3.0.2",
+"node-sass": "^8.0.0",
+"sass": "^1.60.0",
+
+update package version before install, refer installlatestpackage.txt
